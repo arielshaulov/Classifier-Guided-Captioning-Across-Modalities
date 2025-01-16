@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Classifier-Guided Captioning Across Modalities">
+  <meta name="keywords" content="Audio captioning">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Classifier-Guided Captioning Across Modalities</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Zero-Shot Audio Captioning via Audibility Guidance</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?hl=en&user=A31XmP0AAAAJ">Ariel Shaulov</a><sup></sup>,</span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?hl=en&user=SyA5pnoAAAAJ">Tal Shaharabany</a><sup></sup>,</span>
+            <span class="author-block">
+              <a href="https://il.linkedin.com/in/eitan-shaar">Eitan Shaar</a><sup></sup>,</span>
+            <span class="author-block">
+              <a href="https://chechiklab.biu.ac.il/">Gal Chechik</a><sup></sup>,</span>
+            <span class="author-block">
+              <a href="http://www.cs.tau.ac.il/~wolf/">Lior Wolf</a><sup></sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup></sup>School of Computer Science, Tel Aviv University</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- arXiv Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2501.03183"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/arielshaulov/Classifier-Guided-Captioning-Across-Modalities"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+        <img src="./static/images/teaser.jpg" alt="Description of image" class="my-image">
+      <h2 class="subtitle has-text-centered">
+        <span class="dnerf"></span> Illustrative instances of caption generation produced
+        by our pipeline
+        portraits.
+      </h2>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Most current captioning systems use language models trained on data from specific settings, such as image-based captioning via Amazon Mechanical Turk, limiting their ability to generalize to other modality distributions and contexts. 
+            This limitation hinders performance in tasks like audio or video captioning, where different semantic cues are needed. 
+            Addressing this challenge is crucial for creating more adaptable and versatile captioning frameworks applicable across diverse real-world contexts. 
+            In this work, we introduce a method to adapt captioning networks to the semantics of alternative settings, such as capturing audibility in audio captioning, where it is crucial to describe sounds and their sources. 
+            Our framework consists of two main components: (i) a frozen captioning system incorporating a language model (LM), and (ii) a text classifier that guides the captioning system. The classifier is trained on a dataset 
+            automatically generated by GPT-4, using tailored prompts specifically designed to enhance key aspects of the generated captions. 
+            Importantly, the framework operates solely during inference, eliminating the need for further training of the underlying captioning model. 
+            We evaluate the framework on various models and modalities, with a focus on audio captioning, and report promising results. 
+            Notably, when combined with an existing zero-shot audio captioning system, our framework improves its quality and sets state-of-the-art performance in zero-shot audio captioning.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </div>
+</section>
+
+  <!-- Start of new Table section -->
+<section class="section" id="Table">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3 has-text-centered">Audibility Dataset</h2>
+          <p style="margin-bottom: 20px;">Examples from the GPT-4 generated dataset comprising both audible and inaudible sentences. We prompted ChatGPT
+            with the task of creating examples for a classifier that distinguishes between these two categories.</p>
+            <table>
+                <thead>
+                  <tr>
+                    <th>Audible</th>
+                    <th>Not-Audible</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>The barking of a dog in excitement.</td>
+                    <td>Magnets attract metals.</td>
+                  </tr>
+                  <tr>
+                    <td>Ringing phone awaits an answer.</td>
+                    <td>Ice covers the lake in winter.</td>
+                  </tr>
+                  <tr>
+                    <td>The buzz of a drone flying overhead.</td>
+                    <td>Icebergs float on water.</td>
+                  </tr>
+                  <tr>
+                    <td>Birds chirping in early morning.</td>
+                    <td>An umbrella stands closed by the door.</td>
+                  </tr>
+                  <tr>
+                    <td>Jingling coins are counted or played with.</td>
+                    <td>A statue in a park.</td>
+                  </tr>
+                  <tr>
+                    <td>The swishing sound of a washing machine.</td>
+                    <td>Rusting car sits in the yard.</td>
+                  </tr>
+                  <tr>
+                    <td>Whips cracked in the rodeo.</td>
+                    <td>Resolved issue is fixed.</td>
+                  </tr>
+                  <tr>
+                    <td>The meow of a cat.</td>
+                    <td>Soccer balls are stored in a mesh bag.</td>
+                  </tr>
+                  <tr>
+                    <td>The school bell rings, signaling the end of class.</td>
+                    <td>Skimmed milk has less fat.</td>
+                  </tr>
+                  <tr>
+                    <td>Raindrops tapping on rooftops.</td>
+                    <td>A pair of hiking boots rests next to a backpack.</td>
+                  </tr>
+                </tbody>
+              </table>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End of new Table section -->
+
+  
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <p>If you find this project useful for your research, please cite the following:
+    </p>
+    <pre><code>@article{shaulov2025classifier,
+                  title={Classifier-Guided Captioning Across Modalities},
+                  author={Shaulov, Ariel and Shaharabany, Tal and Shaar, Eitan and Chechik, Gal and Wolf, Lior},
+                  journal={arXiv preprint arXiv:2501.03183},
+                  year={2025}
+                }
+      }</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link" href="https://github.com/talshaharabany" class="external-link" disabled>
+            <i class="fab fa-github"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/arielshaulov" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            Website source code based on the
+            <a rel="Nerfies"
+               href="https://nerfies.github.io/">Nerfies</a>
+             project page. If you want to reuse their
+             <a rel="source code"
+               href="https://github.com/nerfies/nerfies.github.io">source code</a>,
+               please credit them appropriately.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
